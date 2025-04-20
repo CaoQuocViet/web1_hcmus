@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook - Đăng ký</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: verdana;
+        }
+
+        /*
+========================
+    GLOBAL CSS START   !
+========================
+*/
+
+        .w-75 {
+            width: 75%;
+            float: left;
+        }
+
+        .w-50 {
+            width: 50%;
+            float: left;
+        }
+
+        .w-40 {
+            width: 40%;
+            float: left;
+        }
+
+        .w-25 {
+            width: 25%;
+            float: left;
+        }
+
+        .w-20 {
+            width: 20%;
+            float: left;
+        }
+
+        /*
+=================================
+         GLOBAL CSS END         !
+=================================
+*/
+
+        /*
+=================================
+    HEADER SECTION CSS START     !
+=================================
+*/
+        .header-section {
+            background-color: #3b5999;
+            padding: 20px 0 5px 0;
+            border-bottom: 1.5px solid black;
+        }
+
+        .header-section .header-container {
+            width: 90%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .header-section .logo-area img {
+            width: 100%;
+            margin: 0 0 0 25px;
+        }
+
+        .header-section .login-section {
+            float: right;
+        }
+
+        .header-section .login-section label {
+            display: block;
+            color: #ffffff;
+            font-size: 15px;
+            font-family: arial;
+            margin-bottom: 5px;
+        }
+
+        .header-section .login-section input[type="text"],
+        .header-section .login-section input[type="password"] {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 7px;
+            outline: none;
+            border: 1px solid #000000;
+            background-color: #e8f0fd;
+        }
+
+        .header-section .login-section input[type="text"]:focus,
+        .header-section .login-section input[type="password"]:focus {
+            border: 1px solid #84abff;
+        }
+
+        .header-section .login-section .spece {
+            padding-right: 15px;
+            box-sizing: border-box;
+        }
+
+        .header-section .login-section a {
+            display: inline-block;
+            text-decoration: none;
+            color: #9db4d6;
+            margin: 4px 0 0 2px;
+        }
+
+        .header-section .login-section a:hover {
+            text-decoration: underline;
+        }
+
+        .header-section .login-section input[type="submit"] {
+            width: 100%;
+            box-sizing: border-box;
+            background-color: #4268b3;
+            border: 2px solid #29487e;
+            color: #ffffff;
+            font-weight: bold;
+            margin-top: 20px;
+            font-size: 15px;
+            padding: 7px;
+            cursor: pointer;
+        }
+
+        .header-section .login-section input[type="submit"]:hover {
+            background-color: #3358a2;
+            border: 2px solid #183362;
+        }
+
+        .login-section.w-75 {
+            width: 65%;
+        }
+
+        /*
+=================================
+    HEADER SECTION CSS END       !
+=================================
+*/
+
+        /*
+=================================
+    CONTENT SECTION CSS START    !
+=================================
+*/
+        .content-section {
+            background: linear-gradient(#ffffff, #a0b0ca);
+            padding: 30px 0 30px 0;
+        }
+
+        .content-section .help-heading {
+            margin: 10px;
+        }
+
+        .content-section .help-heading h2 {
+            color: #0c1e46;
+            font-size: 25px;
+            font-family: arial;
+            margin: 0;
+            margin-left: 35px;
+        }
+
+        .content-container {
+            overflow: hidden;
+            width: 90%;
+            margin: auto;
+        }
+
+        .content-container .connect-people {
+            margin-top: 30px;
+        }
+
+        .content-container .connect-people img {
+            width: 100%;
+            height: 250px;
+        }
+
+        .content-section .main-heading h1 {
+            font-family: arial;
+            font-size: 40px;
+            color: #343434;
+            margin: 0;
+        }
+
+        .content-section .main-heading h3 {
+            font-family: arial;
+            font-size: 20px;
+            color: #333;
+            margin: 0;
+            margin: 10px 0 0 2px;
+        }
+
+        .content-container .form-section {
+            overflow: hidden;
+            margin-top: 20px;
+        }
+
+        .content-container .form-section .i-spece-one {
+            box-sizing: border-box;
+            padding-right: 45px;
+            margin-bottom: 5px;
+        }
+
+        .content-container .form-section .i-spece-two {
+            box-sizing: border-box;
+            padding-right: 28px;
+            margin-bottom: 5px;
+        }
+
+        .content-container .form-section #first-name,
+        .content-container .form-section #surname {
+            width: 100%;
+            padding: 10px;
+            font-size: 20px;
+            border-radius: 8px;
+            border: 2px solid #bcc8d8;
+            outline: none;
+        }
+
+        .content-container .form-section #first-name:focus,
+        .content-container .form-section #surname:focus {
+            border: 2px solid #89a7d0;
+        }
+
+        ::placeholder {
+            color: #5b5353;
+        }
+
+        .content-container .form-section #number-or-email,
+        .content-container .form-section #new-password {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            font-size: 20px;
+            border-radius: 8px;
+            border: 2px solid #bcc8d8;
+            outline: none;
+            box-sizing: border-box;
+            margin-top: 5px;
+        }
+
+        .content-container .form-section #number-or-email:focus,
+        .content-container .form-section #new-password:focus {
+            border: 2px solid #89a7d0;
+        }
+
+        .content-container .form-section .bd {
+            color: #818793;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 15px;
+        }
+
+        .content-container .form-section .select-dob {
+            margin-top: 8px;
+        }
+
+        .content-container .form-section .select-dob select {
+            padding: 4px 7px;
+            color: #2d2d2d;
+            font-weight: bold;
+        }
+
+        .content-container .form-section .select-dob .dob-qus {
+            background-color: #868a95;
+            padding: 3px;
+            border-radius: 50%;
+            width: 16px;
+            text-align: center;
+            display: inline-block;
+            height: 16px;
+        }
+
+        .content-container .form-section .select-dob .dob-qus:hover {
+            background-color: #48526f;
+        }
+
+        .content-container .form-section .select-dob .dob-qus a {
+            color: #ced5e5;
+            text-decoration: none;
+        }
+
+        .content-container .form-section .gender-section .gen-title {
+            color: #818793;
+            font-weight: bold;
+            display: block;
+            margin: 15px 0 10px 0;
+        }
+
+        .content-container .form-section .gender-section input[type="radio"] {
+            margin-left: 12px;
+        }
+
+        .content-container .form-section .gender-section label {
+            color: #484a51;
+            font-weight: bold;
+            font-family: tahoma;
+        }
+
+        .content-container .form-section .gender-section .gender-qus {
+            background-color: #747780;
+            padding: 3px;
+            border-radius: 50%;
+            width: 16px;
+            text-align: center;
+            display: inline-block;
+            height: 16px;
+            margin-left: 5px;
+        }
+
+        .content-container .form-section .gender-section .gender-qus a {
+            color: #ced5e5;
+            text-decoration: none;
+        }
+
+        .content-container .form-section .gender-section .gender-qus:hover {
+            background-color: #48526f;
+        }
+
+        .content-container .form-section .policy-section {
+            width: 70%;
+            font-size: 12px;
+            font-weight: bold;
+            color: #676767;
+            margin-left: 5px;
+        }
+
+        .content-container .form-section .policy-section a {
+            text-decoration: none;
+            color: #395899;
+        }
+
+        .content-container .form-section .policy-section a:hover {
+            text-decoration: underline;
+            color: #395899;
+        }
+
+        .content-container .form-section .submit input {
+            background-color: #5f9c4c;
+            font-size: 18px;
+            padding: 5px 50px;
+            color: #ffffff;
+            box-shadow: 1px 1px 2px #0c1e46;
+            margin: 5px 0 10px 5px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .content-container .form-section .submit input:focus {
+            border: 2px solid #3a6e23;
+            box-shadow: none;
+            outline: none;
+        }
+
+        .content-container .form-section .submit input:hover {
+            background: #4d8a39;
+        }
+
+        /*
+=================================
+    CONTENT SECTION CSS END      !
+=================================
+*/
+
+        /*
+=================================
+    FOOTER SECTION CSS START     !
+=================================
+*/
+        .footer-section {
+            background-color: #ffffff;
+        }
+
+        .footer-section .footer-container {
+            width: 90%;
+            margin: auto;
+            overflow: hidden;
+            box-sizing: border-box;
+            padding: 15px 0 0 0;
+        }
+
+        .footer-section .footer-container ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .footer-section .language-section {
+            font-size: 12px;
+            font-family: arial;
+            margin-left: 50px;
+        }
+
+        .footer-section .footer-container .language-section li {
+            display: inline;
+            color: #737373;
+            margin-right: 8px;
+        }
+
+        .footer-section .footer-container .language-section li>a {
+            color: #8a8d91;
+            text-decoration: none;
+        }
+
+        .footer-section .footer-container .language-section .add-more-icon {
+            color: #626978;
+            width: 25px;
+            height: 18px;
+            border: 1px solid #ccd0d5;
+            display: inline-block;
+            text-align: center;
+            font-size: 18px;
+            text-decoration: none;
+            background-color: #f5f6f7;
+        }
+
+        .footer-section .footer-container .language-section .add-more-icon:focus {
+            box-shadow: 0 0 1px 2px rgba(88, 144, 255, 0.75), 0 1px 1px rgba(0, 0, 0, 0.15);
+            outline: none;
+        }
+
+        .footer-section .footer-container .language-section .add-more-icon:hover {
+            text-decoration: none;
+        }
+
+        .footer-section .footer-container .language-section li>a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-section .other-pages-link .line {
+            border-top: 1px solid #dddfe2;
+            width: 980px;
+            margin: 10px 0 5px 0;
+        }
+
+        .footer-section .other-pages-link li {
+            display: inline;
+            font-size: 12px;
+            font-family: arial;
+            margin-right: 15px;
+        }
+
+        .footer-section .other-pages-link {
+            margin-left: 50px;
+            padding-right: 50px;
+            box-sizing: border-box;
+        }
+
+        .footer-section .other-pages-link li>a {
+            text-decoration: none;
+            color: #8a8d91;
+        }
+
+        .footer-section .other-pages-link li>a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-section .other-pages-link li>a>.ad-icon {
+            width: 14px;
+            box-sizing: border-box;
+            padding-left: 3px;
+            display: inline-block;
+        }
+
+        .footer-section .other-pages-link li>a>.ad-icon img {
+            width: 100%;
+        }
+
+        .footer-section .copywrite {
+            font-size: 11px;
+            color: #737373;
+            margin: 0;
+            margin-left: 50px;
+            font-family: arial;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        /*
+=================================
+    FOOTER SECTION CSS END       !
+=================================
+*/
+
+        /*
+****************************************
+    THIS SECTION FOR RESPONSIVENESS       *
+****************************************
+*/
+
+        /*
+=================================
+    THIS CSS FOR TABLET          !
+=================================
+*/
+
+        /*HEADER PART START*/
+        @media only screen and (max-width: 768px) {
+            .header-section .logo-area img {
+                margin: 13px 0 0 0px;
+            }
+
+            .header-section .login-section .spece {
+                padding-right: 10px;
+            }
+
+            .content-section .help-heading h2 {
+                font-size: 23px;
+                margin: 0;
+            }
+
+            .header-section .login-section input[type="submit"] {
+                margin-top: 12px;
+                font-size: 14px;
+                padding: 5px;
+            }
+
+            .header-section .login-section label {
+                font-size: 14px;
+            }
+
+            .header-section .login-section input[type="text"],
+            .header-section .login-section input[type="password"] {
+                padding: 6px;
+            }
+
+            .header-section .login-section a {
+                font-size: 12px;
+            }
+
+            /*HEADER PART END*/
+
+            /*CONTENT PART START*/
+            .content-section .help-heading {
+                margin: 0;
+            }
+
+            .content-container .connect-people img {
+                height: 180px;
+            }
+
+            .content-section .main-heading h1 {
+                font-size: 33px;
+            }
+
+            .content-section .main-heading h3 {
+                font-size: 18px;
+            }
+
+            .content-container .form-section #first-name,
+            .content-container .form-section #surname {
+                padding: 8px;
+                font-size: 17px;
+                border-radius: 6px;
+            }
+
+            .content-container .form-section #number-or-email,
+            .content-container .form-section #new-password {
+                padding: 8px;
+                font-size: 17px;
+                border-radius: 6px;
+            }
+
+            .content-container .form-section .select-dob select {
+                padding: 3px 1px;
+            }
+
+            .content-container .form-section .gender-section input[type="radio"] {
+                margin-left: 0px;
+            }
+
+            .content-container .form-section .policy-section {
+                width: 80%;
+                font-size: 10px;
+            }
+
+            .content-container .form-section .submit input {
+                font-size: 15px;
+                padding: 6px 35px;
+                box-shadow: 1px 2px 3px 1px #3a6e23;
+                margin: 2px 0 10px 5px;
+                border-radius: 5px;
+            }
+
+            /*CONTENT PART END*/
+        }
+
+        /*
+=================================
+    TABLET CSS IS END HERE       !
+=================================
+*/
+
+        /*
+=================================
+    MOBILE CSS IS STAR HERE      !
+=================================
+*/
+
+        /*HEADER PART START*/
+        @media only screen and (max-width: 425px) {
+            .header-section {
+                padding: 0 0 12px 0;
+            }
+
+            .header-section .w-25 {
+                width: 100%;
+                float: none;
+            }
+
+            .header-section .w-25 .logo-area img {
+                margin: 8px 0 0 90px;
+                width: 50%;
+            }
+
+            .header-section .w-75 {
+                width: 100%;
+                float: none;
+            }
+
+            .header-section .w-75 .login-section .w-40 {
+                width: 100%;
+                float: none;
+            }
+
+            .header-section .w-75 .login-section .w-20 {
+                width: 100%;
+                float: none;
+            }
+
+            .header-section .login-section label {
+                font-size: 13px;
+            }
+
+            .header-section .login-section input[type="text"],
+            .header-section .login-section input[type="password"] {
+                padding: 5px;
+            }
+
+            .header-section .login-section input[type="submit"] {
+                font-size: 14px;
+                padding: 6px 0;
+                box-sizing: content-box;
+            }
+
+            /*HEADER PART END*/
+
+            /*CONTENT PART START*/
+            .content-section {
+                background: linear-gradient(#ffffff, #a0b0ca);
+                padding: 15px 0 15px 0;
+            }
+
+            .content-section .w-50 {
+                width: 100%;
+                float: none;
+            }
+
+            .content-section .help-heading h2 {
+                font-size: 18px;
+            }
+
+            .content-container .connect-people {
+                margin-top: 10px;
+            }
+
+            .content-container .connect-people img {
+                width: 85%;
+                height: 170px;
+                margin-left: 10%;
+            }
+
+            .content-section .main-heading h1 {
+                font-size: 25px;
+            }
+
+            .content-section .main-heading h3 {
+                font-size: 16px;
+            }
+
+            .content-container .form-section {
+                margin-top: 8px;
+            }
+
+            .content-container .form-section .i-spece-one {
+                padding-right: 17px;
+                margin-bottom: 3px;
+            }
+
+            .content-container .form-section .i-spece-two {
+                padding-right: 17px;
+                margin-bottom: 3px;
+            }
+
+            .content-container .form-section #first-name,
+            .content-container .form-section #surname {
+                padding: 6px;
+                font-size: 16px;
+                border-radius: 5px;
+            }
+
+            .content-container .form-section #number-or-email,
+            .content-container .form-section #new-password {
+                padding: 6px;
+                font-size: 16px;
+                border-radius: 5px;
+            }
+
+            .content-container .form-section #number-or-email,
+            .content-container .form-section #new-password {
+                margin-top: 3px;
+            }
+
+            .content-container .form-section .bd {
+                margin: 10px 0 5px 0;
+                font-size: 14px;
+            }
+
+            .content-container .form-section .select-dob {
+                margin-top: 3px;
+            }
+
+            .content-container .form-section .select-dob select {
+                padding: 2px 0px;
+                font-weight: normal;
+                border: 1px solid #bcc7d9;
+            }
+
+            .content-container .form-section .select-dob .dob-qus {
+                padding: 1px;
+                width: 16px;
+                height: 17px;
+            }
+
+            .content-container .form-section .gender-section .gen-title {
+                margin: 14px 0 5px 0;
+                font-size: 14px;
+            }
+
+            .content-container .form-section .gender-section label {
+                font-family: tahoma;
+                font-size: 14px;
+            }
+
+            .content-container .form-section .gender-section .gender-qus {
+                padding: 1px;
+                width: 19px;
+                height: 17px;
+                margin: 0;
+            }
+
+            .content-container .form-section .policy-section {
+                width: 86%;
+            }
+
+            .content-container .form-section .submit input {
+                font-size: 14px;
+                padding: 5px 24px;
+                margin: 2px 0 5px 6px;
+                border: 1px solid #059e05;
+            }
+
+            /*CONTENT PART END*/
+
+            /*FOOTER PART START*/
+            .footer-section .language-section {
+                margin-left: 9px;
+            }
+
+            .footer-section .other-pages-link {
+                margin-left: 9px;
+                padding: 0;
+            }
+
+            .footer-section .copywrite {
+                margin: 15px 0 15px 9px;
+            }
+
+            /*FOOTER PART END*/
+        }
+    </style>
+</head>
+
+<body>
+    <!--
+	  HEADER SECTION START
+                        -->
+    <header class="header-section">
+
+        <div class="header-container">
+            <div class="w-25">
+                <div class="logo-area">
+                    <a href="#" target="_self">
+                        <img src="images/11_facebook-logo.png" alt="Facebook Logo" />
+                    </a>
+                </div>
+            </div>
+            <div class="w-75">
+                <div class="login-section w-75">
+                    <form action="#" method="POST">
+                        <div class="w-40 spece">
+                            <label for="email-or-phone">Email hoặc điện thoại</label>
+                            <input type="text" name="email-or-phone" id="email-or-phone" required />
+                        </div>
+                        <div class="w-40 spece">
+                            <label for="password">Mật khẩu</label>
+                            <input type="password" name="password" id="password" minlength="8" required />
+                            <a href="#" target="_self" title="CLICK NẾU BẠN QUÊN TÀI KHOẢN">Quên mật khẩu?</a>
+                        </div>
+                        <div class="w-20 spece">
+                            <input type="submit" name="submit" id="submit" value="Đăng nhập" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--
+                              HEADER SECTION END
+                                               -->
+
+    <!--
+                              CONTEND SECTION START
+                                                  -->
+    <div class="content-section">
+        <div class="content-container">
+            <div class="w-50">
+                <div class="help-heading">
+                    <h2>
+                        Facebook giúp bạn kết nối và chia sẻ với <br />
+                        mọi người trong cuộc sống của bạn.
+                    </h2>
+                </div>
+                <div class="connect-people">
+                    <img src="images/11_connect-people.png" alt="Connect People" />
+                </div>
+            </div>
+            <div class="w-50">
+                <div class="main-heading">
+                    <h1>Tạo tài khoản mới</h1>
+                    <h3>Nhanh chóng và dễ dàng.</h3>
+                </div>
+                <div class="form-section">
+                    <form action="#" method="POST">
+                        <div class="w-50 i-spece-one">
+                            <input type="text" name="first-name" id="first-name" placeholder="Họ" required />
+                        </div>
+                        <div class="w-50 i-spece-two">
+                            <input type="text" name="surname" id="surname" placeholder="Tên" required />
+                        </div>
+                        <input type="text" name="number-or-email" id="number-or-email"
+                            placeholder="Số di động hoặc email" />
+                        <input type="password" name="new-password" id="new-password" placeholder="Mật khẩu mới" />
+                        <span class="bd">Ngày sinh</span>
+                        <div class="select-dob">
+                            <select name="day" id="day">
+                                <option value="01">1</option>
+                                <option value="02">2</option>
+                                <option value="03">3</option>
+                                <option value="04">04</option>
+                                <option value="05">05</option>
+                                <option value="06">06</option>
+                                <option value="07">07</option>
+                                <option value="08">08</option>
+                                <option value="09">09</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                                <option value="24">24</option>
+                                <option value="25">25</option>
+                                <option value="26">26</option>
+                                <option value="27">27</option>
+                                <option value="28">28</option>
+                                <option value="29">29</option>
+                                <option value="30">30</option>
+                                <option value="31">31</option>
+                            </select>
+                            <select name="month" id="month">
+                                <option value="Jan">Jan</option>
+                                <option value="Feb">Feb</option>
+                                <option value="Mar">Mar</option>
+                                <option value="Apr">Apr</option>
+                                <option value="May">May</option>
+                                <option value="Jun">Jun</option>
+                                <option value="Jul">Jul</option>
+                                <option value="Aug">Aug</option>
+                                <option value="Sep">Sep</option>
+                                <option value="Oct">Oct</option>
+                                <option value="Nov">Nov</option>
+                                <option value="Dec">Dec</option>
+                            </select>
+                            <select name="year" id="year">
+                                <option value="2021">2021</option>
+                                <option value="2020">2020</option>
+                                <option value="2019">2019</option>
+                                <option value="2018">2018</option>
+                                <option value="2017">2017</option>
+                                <option value="2016">2016</option>
+                                <option value="2015">2015</option>
+                                <option value="2014">2014</option>
+                                <option value="2013">2013</option>
+                                <option value="2012">2012</option>
+                                <option value="2011">2011</option>
+                                <option value="2010">2010</option>
+                                <option value="2009">2009</option>
+                                <option value="2008">2008</option>
+                                <option value="2007">2007</option>
+                                <option value="2006">2006</option>
+                                <option value="2005">2005</option>
+                                <option value="2004">2004</option>
+                                <option value="2003">2003</option>
+                                <option value="2002">2002</option>
+                                <option value="2001">2001</option>
+                                <option value="2000">2000</option>
+                                <option value="1999">1999</option>
+                                <option value="1998">1998</option>
+                                <option value="1997">1997</option>
+                                <option value="1996">1996</option>
+                                <option value="1995">1995</option>
+                                <option value="1994">1994</option>
+                                <option value="1993">1993</option>
+                                <option value="1992">1992</option>
+                                <option value="1991">1991</option>
+                                <option value="1990">1990</option>
+                                <option value="1989">1989</option>
+                                <option value="1988">1988</option>
+                                <option value="1987">1987</option>
+                                <option value="1986">1986</option>
+                                <option value="1985">1985</option>
+                                <option value="1984">1984</option>
+                                <option value="1983">1983</option>
+                                <option value="1982">1982</option>
+                                <option value="1981">1981</option>
+                                <option value="1980">1980</option>
+                            </select>
+                            <span class="dob-qus" title="Tại sao cần cung cấp ngày sinh của tôi"><a href="#"
+                                    target="_self">?</a></span>
+                        </div>
+                        <div class="gender-section">
+                            <span class="gen-title"> Giới tính </span>
+                            <input type="radio" name="gender" id="female" value="female" />
+                            <label for="female">Nữ</label>
+                            <input type="radio" name="gender" id="male" value="male" />
+                            <label for="male">Nam</label>
+                            <span class="gender-qus" title="Tại sao hỏi giới tính của tôi"><a href="#"
+                                    target="_self">?</a></span>
+                        </div>
+                        <div class="policy-section">
+                            <p>
+                                Bằng cách nhấp vào Đăng ký, bạn đồng ý với
+                                <a href="#" target="_self">Điều khoản, Chính sách dữ liệu</a> và
+                                <a href="#" target="_self">Chính sách cookie</a> của chúng tôi. Bạn có thể nhận được
+                                thông báo SMS từ chúng tôi và có thể từ chối bất kỳ lúc nào.
+                            </p>
+                        </div>
+                        <div class="submit">
+                            <input type="submit" name="sign-up" id="sign-up" value="Đăng ký" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--
+                              CONTEND SECTION END
+                                                  -->
+
+    <!--
+                               FOOTER SECTION START
+                                                  -->
+    <footer class="footer-section">
+        <div class="footer-container">
+            <div class="language-section">
+                <ul>
+                    <li>Tiếng Việt</li>
+                    <li>English (UK)</li>
+                    <li><a href="#" target="_self">বাংলা</a></li>
+                    <li><a href="#" target="_self">অসমীয়া</a></li>
+                    <li><a href="#" target="_self">हिन्दी</a></li>
+                    <li><a href="#" target="_self">Bahasa Indonesia</a></li>
+                    <li><a href="#" target="_self">नेपाली</a></li>
+                    <li><a href="#" target="_self">中文(简体)</a></li>
+                    <li><a href="#" target="_self">العربية</a></li>
+                    <li><a href="#" target="_self">Bahasa Melayu</a></li>
+                    <li><a href="#" target="_self">Español</a></li>
+                    <li><a href="#" target="_self">Português (Brasil)</a></li>
+                    <li><a href="#" target="_self" class="add-more-icon">+</a></li>
+                </ul>
+            </div>
+            <div class="other-pages-link">
+                <div class="line"></div>
+                <ul>
+                    <li><a href="#" target="_self">Sign Up</a></li>
+                    <li><a href="#" target="_self">Log In</a></li>
+                    <li><a href="#" target="_self">Messenger</a></li>
+                    <li><a href="#" target="_self">Facebook Lite </a></li>
+                    <li><a href="#" target="_self">Watch </a></li>
+                    <li><a href="#" target="_self">People</a></li>
+                    <li><a href="#" target="_self">Pages</a></li>
+                    <li><a href="#" target="_self">Page categories</a></li>
+                    <li><a href="#" target="_self">Places</a></li>
+                    <li><a href="#" target="_self">Games</a></li>
+                    <li><a href="#" target="_self">Locations</a></li>
+                    <li><a href="#" target="_self">Marketplace</a></li>
+                    <li><a href="#" target="_self">Facebook Pay</a></li>
+                    <li><a href="#" target="_self">Groups</a></li>
+                    <li><a href="#" target="_self">Jobs</a></li>
+                    <li><a href="#" target="_self">Oculus</a></li>
+                    <li><a href="#" target="_self">Portal</a></li>
+                    <li><a href="#" target="_self">Instagram</a></li>
+                    <li><a href="#" target="_self">Local</a></li>
+                    <li><a href="#" target="_self">Fundraisers</a></li>
+                    <li><a href="#" target="_self">Services</a></li>
+                    <li><a href="#" target="_self">Voting Information Centre</a></li>
+                    <li><a href="#" target="_self">About</a></li>
+                    <li><a href="#" target="_self">Create ad</a></li>
+                    <li><a href="#" target="_self">Create Page</a></li>
+                    <li><a href="#" target="_self">Developers</a></li>
+                    <li><a href="#" target="_self">Careers</a></li>
+                    <li><a href="#" target="_self">Privacy</a></li>
+                    <li><a href="#" target="_self">Cookies</a></li>
+                    <li>
+                        <a href="#" target="_self">AdChoices</a>
+                    </li>
+                    <li><a href="#" target="_self">Terms</a></li>
+                    <li><a href="#" target="_self">Help</a></li>
+                </ul>
+            </div>
+            <div class="copywrite">
+                <p>Facebook &copy; 2021</p>
+            </div>
+        </div>
+    </footer>
+    <!--
+                               FOOTER SECTION END
+                                                -->
+</body>
+
+</html>
