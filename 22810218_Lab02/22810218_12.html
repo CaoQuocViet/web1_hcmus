@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Your Google Account</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 20px;
+            background-color: #d3d2d2;
+        }
+
+        .container {
+            display: flex;
+            width: 80%;
+            border-radius: 8px;
+            background-color: #ffffff;
+            flex-direction: column;
+        }
+
+        .header {
+            text-align: center;
+            width: 100%;
+            padding: 20px 0;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: normal;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        .content {
+            display: flex;
+            width: 100%;
+        }
+
+        .left-section, .right-section {
+            padding: 30px;
+        }
+
+        .left-section {
+            width: 65%;
+            margin: 0 2%;
+        }
+
+        .right-section {
+            width: 35%;
+            margin: 0 2%;
+            background-color: #e7e7e7;
+            border-radius: 8px;
+        }
+
+        h3 {
+            font-size: 25px;
+            font-weight: normal;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #222;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .name-group, .birthday-group {
+            display: flex;
+            gap: 10px;
+        }
+
+        .name-group input, .birthday-group select, .birthday-group input {
+            flex: 1;
+        }
+
+        .phone-prefix {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .phone-prefix span {
+            background: #f8f9fa;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .next-button {
+            background: #1a73e8;
+            color: white;
+            border: none;
+            padding: 10px 24px;
+            border-radius: 4px;
+            cursor: pointer;
+            float: right;
+        }
+
+        .next-button:hover {
+            background: #1557b0;
+        }
+
+        .info-link {
+            clear: both;
+            padding-top: 30px;
+            font-size: 14px;
+        }
+
+        .info-link a {
+            color: #1a73e8;
+            text-decoration: none;
+        }
+
+        .icons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 30px;
+            margin-top: 40px;
+        }
+
+        .icons img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .banner img {
+            width: 100%;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+        
+        .take-with-you {
+            margin-top: 30px;
+            text-align: center;
+        }
+        
+        .take-with-you h3 {
+            margin-bottom: 10px;
+            margin-top: 40px;
+        }
+        
+        .take-with-you p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .error {
+            color: red;
+            font-size: 12px;
+            margin-top: 5px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>CREATE YOUR GOOGLE ACCOUNT</h1>
+        </div>
+        <div class="content">
+            <div class="left-section">
+                <h3>One account is all you need</h3>
+                <p class="subtitle">One free account gets you into everything Google.</p>
+                <div class="icons">
+                    <img src="https://img.icons8.com/?size=100&id=17949&format=png&color=000000" alt="Google">
+                    <img src="https://img.icons8.com/?size=100&id=qyRpAggnV0zH&format=png&color=000000" alt="Gmail">
+                    <img src="https://img.icons8.com/?size=100&id=19318&format=png&color=000000" alt="YouTube">
+                    <img src="https://img.icons8.com/?size=100&id=DcygmpZqBEd9&format=png&color=000000" alt="Maps">
+                    <img src="https://img.icons8.com/?size=100&id=rZwnRdJyYqRi&format=png&color=000000" alt="Play">
+                    <img src="https://img.icons8.com/?size=100&id=rZwnRdJyYqRi&format=png&color=000000" alt="News">
+                    <img src="https://img.icons8.com/?size=100&id=VLr4hUR8iMGF&format=png&color=000000" alt="Drive">
+                    <img src="https://img.icons8.com/?size=100&id=WKF3bm1munsk&format=png&color=000000" alt="Calendar">
+                </div>
+                <div class="take-with-you">
+                    <h3>Take it all with you</h3>
+                    <p>Switch between devices, and pick up wherever you left off.</p>
+                </div>
+                <div class="banner">
+                    <img src="images/12_multi_screen.png" alt="Multi Screen">
+                </div>
+            </div>
+            <div class="right-section">
+                <form id="accountForm" onsubmit="return validateForm()">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <div class="name-group">
+                            <input type="text" id="firstName" placeholder="First" required>
+                            <input type="text" id="lastName" placeholder="Last" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Choose your username</label>
+                        <input type="email" id="email" placeholder="@gmail.com" required>
+                        <div id="emailError" class="error">Please enter a valid email address</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Create a password</label>
+                        <input type="password" id="password" required minlength="8">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Confirm your password</label>
+                        <input type="password" id="confirmPassword" required>
+                        <div id="passwordError" class="error">Passwords do not match</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Birthday</label>
+                        <div class="birthday-group">
+                            <select id="month" required>
+                                <option value="">Month</option>
+                                <option value="1">January</option>
+                                <option value="2">February</option>
+                                <option value="3">March</option>
+                                <option value="4">April</option>
+                                <option value="5">May</option>
+                                <option value="6">June</option>
+                                <option value="7">July</option>
+                                <option value="8">August</option>
+                                <option value="9">September</option>
+                                <option value="10">October</option>
+                                <option value="11">November</option>
+                                <option value="12">December</option>
+                            </select>
+                            <input type="number" id="day" min="1" max="31" placeholder="Day" required>
+                            <input type="number" id="year" min="1900" max="2025" placeholder="Year" required>
+                        </div>
+                        <div id="dateError" class="error">Please enter a valid date</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Gender</label>
+                        <select id="gender" required>
+                            <option value="">I am...</option>
+                            <option value="female">Female</option>
+                            <option value="male">Male</option>
+                            <option value="other">Other</option>
+                            <option value="rather_not_say">Rather not say</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Mobile phone</label>
+                        <div class="phone-prefix">
+                            <span>+84</span>
+                            <input type="tel" id="phone" pattern="[0-9]{9,10}" style="flex: 1" required>
+                        </div>
+                        <div id="phoneError" class="error">Please enter a valid phone number</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Your current email address</label>
+                        <input type="email" id="currentEmail">
+                        <div id="currentEmailError" class="error">Please enter a valid email address</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Location</label>
+                        <select id="location" required>
+                            <option value="vietnam" selected>Vietnam (Việt Nam)</option>
+                            <option value="usa">United States</option>
+                            <option value="uk">United Kingdom</option>
+                            <option value="canada">Canada</option>
+                            <option value="australia">Australia</option>
+                            <option value="japan">Japan</option>
+                            <option value="singapore">Singapore</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="next-button">Next step</button>
+
+                    <div class="info-link">
+                        <a href="#">Learn more about why we ask for this information.</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Get the month select element
+        const monthSelect = document.getElementById('month');
+        const dayInput = document.getElementById('day');
+        const yearInput = document.getElementById('year');
+        
+        // Add event listener to update max days when month changes
+        monthSelect.addEventListener('change', updateDays);
+        yearInput.addEventListener('change', updateDays);
+        
+        function updateDays() {
+            const month = parseInt(monthSelect.value);
+            const year = parseInt(yearInput.value);
+            
+            if (month && year) {
+                let maxDays;
+                
+                if ([4, 6, 9, 11].includes(month)) {
+                    maxDays = 30;
+                } else if (month === 2) {
+                    // Check for leap year
+                    if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+                        maxDays = 29;
+                    } else {
+                        maxDays = 28;
+                    }
+                } else {
+                    maxDays = 31;
+                }
+                
+                dayInput.max = maxDays;
+                
+                // If current day is greater than max days for the month, reset to max days
+                if (parseInt(dayInput.value) > maxDays) {
+                    dayInput.value = maxDays;
+                }
+            }
+        }
+        
+        function validateForm() {
+            let isValid = true;
+            
+            // Validate email format
+            const email = document.getElementById('email');
+            const emailError = document.getElementById('emailError');
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            
+            if (!emailRegex.test(email.value)) {
+                emailError.style.display = 'block';
+                isValid = false;
+            } else {
+                emailError.style.display = 'none';
+            }
+            
+            // Validate password match
+            const password = document.getElementById('password');
+            const confirmPassword = document.getElementById('confirmPassword');
+            const passwordError = document.getElementById('passwordError');
+            
+            if (password.value !== confirmPassword.value) {
+                passwordError.style.display = 'block';
+                isValid = false;
+            } else {
+                passwordError.style.display = 'none';
+            }
+            
+            // Validate phone number
+            const phone = document.getElementById('phone');
+            const phoneError = document.getElementById('phoneError');
+            const phoneRegex = /^[0-9]{9,10}$/;
+            
+            if (phone.value && !phoneRegex.test(phone.value)) {
+                phoneError.style.display = 'block';
+                isValid = false;
+            } else {
+                phoneError.style.display = 'none';
+            }
+            
+            // Validate current email if provided
+            const currentEmail = document.getElementById('currentEmail');
+            const currentEmailError = document.getElementById('currentEmailError');
+            
+            if (currentEmail.value && !emailRegex.test(currentEmail.value)) {
+                currentEmailError.style.display = 'block';
+                isValid = false;
+            } else {
+                currentEmailError.style.display = 'none';
+            }
+            
+            // Validate date
+            const month = document.getElementById('month').value;
+            const day = document.getElementById('day').value;
+            const year = document.getElementById('year').value;
+            const dateError = document.getElementById('dateError');
+            
+            if (month && day && year) {
+                const date = new Date(year, month - 1, day);
+                
+                if (date.getFullYear() != year || date.getMonth() != month - 1 || date.getDate() != day) {
+                    dateError.style.display = 'block';
+                    isValid = false;
+                } else {
+                    dateError.style.display = 'none';
+                }
+            }
+            
+            return isValid;
+        }
+    </script>
+</body>
+</html>
