@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>What Can JavaScript Do?</h1>
+
+    <p>JavaScript có thể thay đổi các thuộc tính HTML.</p>
+    <p>Trong ví dụ này, JavaScript thay đổi thuộc tính <code>src</code> (nguồn) của một hình ảnh.</p>
+
+    <!-- Nút bật đèn -->
+    <button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">
+      Turn on the light
+    </button>
+
+    <!-- Hình ảnh bóng đèn -->
+    <img id="myImage" src="pic_bulboff.gif" style="width:100px">
+
+    <!-- Nút tắt đèn -->
+    <button onclick="document.getElementById('myImage').src='pic_bulboff.gif'">
+      Turn off the light
+    </button>
+  </body>
+</html>
