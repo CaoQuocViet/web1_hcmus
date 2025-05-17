@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First Web Page</h1>
+<p>My first paragraph.</p>
+<p id="demo">Initial data here, never be displayed!</p>
+
+<script>
+  window.alert(5 + 6); // Hiện alert hộp thoại với giá trị 11
+
+  // Ngay sau alert, dòng dưới sẽ ghi đè toàn bộ nội dung trang bằng document.write
+  document.write("This is written with document write!");
+
+  // Dòng dưới KHÔNG có cơ hội thực thi, vì document.write đã xóa hết nội dung DOM
+  document.getElementById("demo").innerHTML = 7 + 2;
+</script>
+
+<!-- Nút này cũng không hiển thị vì document.write đã ghi đè toàn bộ tài liệu -->
+<button onclick="document.write(10/2)">Erase all</button>
+
+</body>
+</html>
